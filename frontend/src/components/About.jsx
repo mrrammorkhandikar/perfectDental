@@ -13,7 +13,7 @@ const About = () => {
           {/* Image Section - Left Side */}
           <Box flex={1} display="flex" justifyContent="center">
             <Image
-              src="/src/assets/Images/client/AboutUs.png"
+              src="/public/Images/client/AboutUs.png"
               alt="About Perfect32 Dental Care"
               borderRadius="2xl"
               shadow="2xl"
