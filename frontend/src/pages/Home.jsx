@@ -42,7 +42,7 @@ const Home = () => {
         {/* Hero Section */}
         <Box
           minH="100vh"
-          bgImage="url('/src/assets/Images/client/image.jpg')"
+          bgImage="url('/Images/client/image.jpg')"
           bgSize="cover"
           bgPosition="center"
           bgRepeat="no-repeat"
@@ -129,7 +129,7 @@ const Home = () => {
                  justifyContent="center" 
                >
                 <Image
-                  src="/src/assets/Images/client/HomeImage.png"
+                  src="/Images/client/HomeImage.png"
                   alt="Dental Care Overlay"
                   borderRadius="2xl"
                   shadow="2xl"
