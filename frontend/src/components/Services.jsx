@@ -8,12 +8,33 @@ const MotionBox = motion(Box);
 
 // Service data
 const services = [
-  { title: "General Dentistry", description: "Comprehensive oral health care including cleanings, fillings, and preventive treatments.", img: "/src/assets/Images/client/Serv_1.png" },
-  { title: "Cosmetic Dentistry", description: "Transform your smile with veneers, whitening, and aesthetic dental procedures.", img: "/src/assets/Images/client/HomeImage.png" },
-  { title: "Orthodontics", description: "Straighten your teeth with traditional braces or modern clear aligner systems.", img: "/src/assets/Images/client/Serv_2.png" },
-  { title: "Implants", description: "Replace missing teeth with long-lasting, natural-looking dental implants.", img: "/src/assets/Images/client/Serv_4.png" },
-  { title: "Pediatric Dentistry", description: "Gentle and friendly dental care for children to build healthy habits early.", img: "/src/assets/Images/client/Serv_5.png" },
+  { 
+    title: "General Dentistry", 
+    description: "Comprehensive oral health care including cleanings, fillings, and preventive treatments.", 
+    img: "/Images/client/Serv_1.png" 
+  },
+  { 
+    title: "Cosmetic Dentistry", 
+    description: "Transform your smile with veneers, whitening, and aesthetic dental procedures.", 
+    img: "/Images/client/HomeImage.png" 
+  },
+  { 
+    title: "Orthodontics", 
+    description: "Straighten your teeth with traditional braces or modern clear aligner systems.", 
+    img: "/Images/client/Serv_2.png" 
+  },
+  { 
+    title: "Implants", 
+    description: "Replace missing teeth with long-lasting, natural-looking dental implants.", 
+    img: "/Images/client/Serv_4.png" 
+  },
+  { 
+    title: "Pediatric Dentistry", 
+    description: "Gentle and friendly dental care for children to build healthy habits early.", 
+    img: "/Images/client/Serv_5.png" 
+  },
 ];
+
 
 // Service Card Component (No Flip)
 function ServiceCard({ service }) {
