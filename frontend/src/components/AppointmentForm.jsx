@@ -32,38 +32,40 @@ const AppointmentForm = ({ onClose }) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    const apiEndpoint = "http://localhost:3001/api/send-email"; 
+  e.preventDefault();
 
-    try {
-      const response = await fetch(apiEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+  // Use relative path for Vercel deployment
+  const apiEndpoint = "/api/send-email";
+
+  try {
+    const response = await fetch(apiEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert("Your appointment request has been sent successfully! We will contact you soon.");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
       });
-
-      if (response.ok) {
-        const result = await response.json();
-        alert("Your appointment request has been sent successfully! We will contact you soon.");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          service: "",
-        });
-        if (onClose) onClose();
-      } else {
-        const errorResult = await response.json();
-        alert(errorResult.message || "Failed to submit request. Please try again later.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred. Please check your network connection.");
+      if (onClose) onClose();
+    } else {
+      alert(result.message || "Failed to submit request. Please try again later.");
     }
-  };
+
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("An error occurred. Please check your network connection.");
+  }
+};
 
   return (
     <Box
